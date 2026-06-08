@@ -581,5 +581,5 @@ async def on_shutdown(application):
         await log_event(administrator_id, "database is closing now (shutdown sequence)")
         await database_connection.close()
 bot_application.post_stop = on_shutdown
-    keep_alive()
+keep_alive()
 bot_application.run_polling()
